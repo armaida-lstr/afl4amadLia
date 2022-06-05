@@ -24,7 +24,7 @@ class NewsVM: ObservableObject {
     
     @Published var phase = DataFetchPhase<[Article]>.empty
     @Published var fetchTaskToken: FetchTaskToken
-    private let newsAPI = NewsAPI.shared
+    private let newsAPI = API.shared
     
     init(articles: [Article]? = nil, selectedCategory: KategoriA = .general) {
         if let articles = articles {

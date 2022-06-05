@@ -18,7 +18,7 @@ class SearchVM: ObservableObject {
     private let historyDataStore = PlistDataStore<[String]>(filename: "histories")
     private let historyMaxLimit = 10
     
-    private let newsAPI = NewsAPI.shared
+    private let newsAPI = API.shared
     private var trimmedSearchQuery: String {
         searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
     }

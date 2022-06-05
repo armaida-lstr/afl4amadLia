@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 25/05/22.
 //
 
 import SwiftUI
@@ -10,11 +10,26 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+//            VStack {
+//                        Divider()
+//                        ScrollView(.horizontal) {
+//                            HStack(spacing: 10) {
+//                                ForEach(0..<10) { index in
+//                                    NewsTab(label: "\(index)")
+//                                }
+//
+//                            }.padding()
+//                        }.frame(height: 100)
+//                        Divider()
+//                        Spacer()
+//                    }
+           
+        
             NewsTab()
-            
-                .tabItem {
+                    .tabItem {
                     Label("News", systemImage: "newspaper")
                 }
+                
             
 //            SearchTab()
 //                .tabItem {

@@ -2,7 +2,7 @@
 //  TampilanArticle.swift
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 31/05/22.
 //
 
 import SwiftUI
@@ -13,9 +13,9 @@ struct TampilanArticle: View {
     
     let article: Article
     var body: some View {
-        VStack(alignment: .trailing, spacing: 16) {
+        VStack(alignment: .trailing, spacing: 18) {
             AsyncImage(url: article.imageURL) { phase in
-           
+  //             VStack(alignment: .trailing, spacing: -120) {
                 switch phase {
                 case .empty:
                     HStack {
@@ -46,7 +46,7 @@ struct TampilanArticle: View {
             .background(Color.gray.opacity(0.3))
             .clipped()
 
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text(article.title)
                     .font(.headline)
                     .lineLimit(3)
@@ -112,7 +112,7 @@ struct TampilanArticle_Previews: PreviewProvider {
         NavigationView {
             List {
                 TampilanArticle(article: .previewData[0])
-                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .listRowInsets(.init(top: 2, leading: 6, bottom: 2, trailing: 6))
             }
             .listStyle(.plain)
         }

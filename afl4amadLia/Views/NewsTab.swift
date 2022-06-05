@@ -2,14 +2,15 @@
 //  NewsTab.swift
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 31/05/22.
 //
 
 import SwiftUI
 
 struct NewsTab: View {
   //  @State var label: String
-    
+//    @State var label: String
+  
     @StateObject var searchVM = SearchVM.shared
     @StateObject var articleNewsVM = NewsVM()
     
@@ -31,6 +32,7 @@ struct NewsTab: View {
                 .refreshable(action: refreshTask)
                 .navigationTitle(articleNewsVM.fetchTaskToken.kategoriA.text)
                 .navigationBarItems(trailing: menu)
+//                .navigationTitle("The Sire News")
             
 
                 .navigationTitle("Search")
@@ -125,8 +127,20 @@ struct NewsTab: View {
                 }
             }
         } label: {
-            Image(systemName: "fiberchannel")
+            Image(systemName: "checklist")
                 .imageScale(.large)
+//
+//            ZStack {
+//                Circle()
+//                    .fill(Color.yellow)
+//                    .frame(width: 70, height: 70)
+//                    .imageScale(.large)
+//                Text(label)
+//
+//
+                                 
+            
+//
         }
     }
     

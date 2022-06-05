@@ -2,7 +2,7 @@
 //  BookmarkTab.swift
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 31/05/22.
 //
 
 import SwiftUI
@@ -18,7 +18,7 @@ struct BookmarkTab: View {
         NavigationView {
             ArticleListView(articles: articles)
                 .overlay(overlayView(isEmpty: articles.isEmpty))
-                .navigationTitle("Saved Articles")
+                .navigationTitle("Favorites Articles")
         }
         .searchable(text: $searchText)
     }
@@ -37,7 +37,7 @@ struct BookmarkTab: View {
     @ViewBuilder
     func overlayView(isEmpty: Bool) -> some View {
         if isEmpty {
-            SimpanKosong(text: "No saved articles", image: Image(systemName: "heart.rectangle"))
+            SimpanKosong(text: "No saved articles Favorites", image: Image(systemName: "heart.rectangle"))
         }
     }
 }

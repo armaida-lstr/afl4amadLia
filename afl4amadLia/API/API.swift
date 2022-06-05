@@ -1,15 +1,15 @@
 //
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 25/05/22.
 //
 
 
 import Foundation
 
-struct NewsAPI {
+struct API {
     
-    static let shared = NewsAPI()
+    static let shared = API()
     private init() {}
     
     private let apiKey = "41855beebf3449a99669da4062946153"
@@ -42,15 +42,15 @@ struct NewsAPI {
             if apiResponse.status == "ok" {
                 return apiResponse.articles ?? []
             } else {
-                throw generateError(description: apiResponse.message ?? "An error occured")
+                throw generateError(description: apiResponse.message ?? "An Error Occured")
             }
         default:
-            throw generateError(description: "A server error occured")
+            throw generateError(description: "server error")
         }
     }
     
     private func generateError(code: Int = 1, description: String) -> Error {
-        NSError(domain: "NewsAPI", code: code, userInfo: [NSLocalizedDescriptionKey: description])
+        NSError(domain: "API", code: code, userInfo: [NSLocalizedDescriptionKey: description])
     }
     
     private func generateSearchURL(from query: String) -> URL {

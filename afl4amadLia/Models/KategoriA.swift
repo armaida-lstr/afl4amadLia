@@ -2,7 +2,7 @@
 //  KategoriA.swift
 //  afl4amadLia
 //
-//  Created by MacBook Pro on 29/05/22.
+//  Created by MacBook Pro on 03/06/22.
 //
 
 import Foundation
@@ -10,15 +10,18 @@ import Foundation
 enum KategoriA: String, CaseIterable {
     case general
     case business
-    case technology
     case entertainment
-    case sports
-    case science
     case health
+    case science
+    case sports
+    case technology
+    
+
+  
     
     var text: String {
         if self == .general {
-            return "Top Headlines"
+            return "The Sire News"
         }
         return rawValue.capitalized
     }
