@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BACA45AE-3432-492E-9DA9-55B9B7501153"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3106847-62E1-443B-BD45-A5A0637B17B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "afl4amadLia/Views/NewsTab.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "NewsTab_Previews"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "A3106847-62E1-443B-BD45-A5A0637B17B0 - 49c10893b7152262"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static afl4amadLia.NewsTab_Previews.bookmarkVM.getter : afl4amadLia.BookmarkVM"
+                  moduleName = "afl4amadLia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/afl4amadLia/afl4amadLia/Views/NewsTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "A3106847-62E1-443B-BD45-A5A0637B17B0 - a9c650d040adf66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "afl4amadLia.NewsTab_Previews._bookmarkVM.unsafeMutableAddressor : SwiftUI.StateObject&lt;afl4amadLia.BookmarkVM&gt;"
+                  moduleName = "afl4amadLia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/afl4amadLia/afl4amadLia/Views/NewsTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "A3106847-62E1-443B-BD45-A5A0637B17B0 - fb15a0692683aed4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for _bookmarkVM"
+                  moduleName = "afl4amadLia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/afl4amadLia/afl4amadLia/Views/NewsTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "A3106847-62E1-443B-BD45-A5A0637B17B0 - 9456446f4ee743dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static afl4amadLia.NewsTab_Previews.$bookmarkVM.getter : SwiftUI.ObservedObject&lt;afl4amadLia.BookmarkVM&gt;.Wrapper"
+                  moduleName = "afl4amadLia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/afl4amadLia/afl4amadLia/Views/NewsTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "142">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
