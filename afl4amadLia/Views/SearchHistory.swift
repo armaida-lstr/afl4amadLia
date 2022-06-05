@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchHistory: View {
     
-    @ObservedObject var searchVM: SearchVM
+    @ObservedObject var searchVM: NewsVM
     let onSubmit: (String) -> ()
     
     var body: some View {
@@ -43,7 +43,7 @@ struct SearchHistory: View {
 
 struct SearchHistory_Previews: PreviewProvider {
     static var previews: some View {
-        SearchHistory(searchVM: SearchVM.shared) { _ in
+        SearchHistory(searchVM: NewsVM.shared) { _ in
             
         }
     }
