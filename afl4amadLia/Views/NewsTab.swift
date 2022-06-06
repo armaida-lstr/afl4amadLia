@@ -205,7 +205,8 @@ struct NewsTab: View {
     private func search() {
         let searchQuery = articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
         if !searchQuery.isEmpty {
-            articleNewsVM.addHistory(searchQuery)
+//            articleNewsVM.addHistory(searchQuery)
+            articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
         }
         
         Task {

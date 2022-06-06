@@ -24,10 +24,10 @@ class NewsVM: ObservableObject {
     //search
     @Published var phase: DataFetchPhase<[Article]> = .empty
     @Published var searchQuery = ""
-    @Published var history = [String]()
+ //   @Published var history = [String]()
     
-    private let historyDataStore = PlistDataStore<[String]>(filename: "histories")
-    private let historyMaxLimit = 10
+  //  private let historyDataStore = PlistDataStore<[String]>(filename: "histories")
+  //  private let historyMaxLimit = 10
     
    // private let newsAPI = API.shared
     
@@ -46,29 +46,29 @@ class NewsVM: ObservableObject {
 //    }
     
     //search
-    func addHistory(_ text: String) {
-        if let index = history.firstIndex(where: { text.lowercased() == $0.lowercased() }) {
-            history.remove(at: index)
-        } else if history.count == historyMaxLimit {
-            history.remove(at: history.count - 1)
-        }
-        
-        history.insert(text, at: 0)
-        historiesUpdated()
-    }
-    
-    func removeHistory(_ text: String) {
-        guard let index = history.firstIndex(where: { text.lowercased() == $0.lowercased() }) else {
-            return
-        }
-        history.remove(at: index)
-        historiesUpdated()
-    }
-    
-    func removeAllHistory() {
-        history.removeAll()
-        historiesUpdated()
-    }
+//    func addHistory(_ text: String) {
+//        if let index = history.firstIndex(where: { text.lowercased() == $0.lowercased() }) {
+//            history.remove(at: index)
+//        } else if history.count == historyMaxLimit {
+//            history.remove(at: history.count - 1)
+//        }
+//
+//        history.insert(text, at: 0)
+//        historiesUpdated()
+//    }
+//
+//    func removeHistory(_ text: String) {
+//        guard let index = history.firstIndex(where: { text.lowercased() == $0.lowercased() }) else {
+//            return
+//        }
+//        history.remove(at: index)
+//        historiesUpdated()
+//    }
+//
+//    func removeAllHistory() {
+//        history.removeAll()
+//        historiesUpdated()
+//    }
     
     func searchArticle() async {
         if Task.isCancelled { return }
@@ -102,13 +102,13 @@ class NewsVM: ObservableObject {
 //        }
 //    }
     
-    private func historiesUpdated() {
-        let history = self.history
-        Task {
-            await historyDataStore.save(history)
-        }
-    }
-    
+//    private func historiesUpdated() {
+//        let history = self.history
+//        Task {
+//            await historyDataStore.save(history)
+//        }
+//    }
+//
     
     
     
