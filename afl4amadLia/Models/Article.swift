@@ -10,7 +10,7 @@ fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
 
 struct Article {
     
-    // This id will be unique and auto generated from client side to avoid clashing of Identifiable in a List as NewsAPI response doesn't provide unique identifier
+    //kategori
     let id = UUID()
 
     let source: Source
