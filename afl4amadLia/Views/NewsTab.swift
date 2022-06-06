@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct NewsTab: View {
-  //  @State var label: String
-//    @State var label: String
-  
- //   @StateObject var searchVM = SearchVM.shared
+ 
     @StateObject var articleNewsVM = NewsVM()
     
     
@@ -66,32 +63,6 @@ struct NewsTab: View {
         }
     }
     
-//        switch searchVM.phase {
-//        case .empty:
-//            if !searchVM.searchQuery.isEmpty {
-//                ProgressView()
-//            } else if !searchVM.history.isEmpty {
-//                SearchHistory(searchVM: searchVM) { newValue in
-//                    // Need to be handled manually as it doesn't trigger default onSubmit modifier
-//                    searchVM.searchQuery = newValue
-//                    search()
-//                }
-//            } else {
-//                SimpanKosong(text: "Type your query to search from NewsAPI", image: Image(systemName: "magnifyingglass"))
-//           }
-////
-//        case .success(let articles) where articles.isEmpty:
-//            SimpanKosong(text: "No search results found", image: Image(systemName: "magnifyingglass"))
-//
-//        case .failure(let error):
-//            RetryView(text: error.localizedDescription, retryAction: search)
-//
-//        default: EmptyView()
-//
-//        }
-        
-        
-        
         
       
     private var articles: [Article] {
@@ -102,18 +73,9 @@ struct NewsTab: View {
          else {
            return []
        }
-//        if case .success(let articles) = searchVM.phase {
-//           return articles
-//        }
+
     }
-//
-//    private func search() {
-//        let searchQuery = articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-//        Task {
-//            await articleNewsVM.searchArticle()
-//        }
-//    }
-//
+
   
     
     @Sendable
@@ -153,55 +115,7 @@ struct NewsTab: View {
         }
     }
     
-    
-    
-    
-//    private var art: [Article] {
-//        if case .success(let articles) = searchVM.phase {
-//           return articles
-//        } else {
-//            return []
-//        }
-//    }
-    
-//    @ViewBuilder
-//    private var overL: some View {
-//        switch searchVM.phase {
-//        case .empty:
-//            if !searchVM.searchQuery.isEmpty {
-//                ProgressView()
-//            } else if !searchVM.history.isEmpty {
-//                SearchHistory(searchVM: searchVM) { newValue in
-//                    // Need to be handled manually as it doesn't trigger default onSubmit modifier
-//                    searchVM.searchQuery = newValue
-//                    search()
-//                }
-//            } else {
-//                SimpanKosong(text: "Type your query to search from NewsAPI", image: Image(systemName: "magnifyingglass"))
-//            }
-//
-//        case .success(let articles) where articles.isEmpty:
-//            SimpanKosong(text: "No search results found", image: Image(systemName: "magnifyingglass"))
-//
-//        case .failure(let error):
-//            RetryView(text: error.localizedDescription, retryAction: search)
-//
-//        default: EmptyView()
-//
-//        }
-//    }
-//
-//    @ViewBuilder
-//    private var suggestionsView: some View {
-//        ForEach(["Apple", "NCT", "BTS", "UNIVERSITAS", "INDONESIA"], id: \.self) { text in
-//            Button {
-//                searchVM.searchQuery = text
-//            } label: {
-//                Text(text)
-//            }
-//        }
-//    }
-    
+ 
     private func search() {
         let searchQuery = articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
         if !searchQuery.isEmpty {
@@ -218,9 +132,6 @@ struct NewsTab: View {
 struct NewsTab_Previews: PreviewProvider {
     
     @StateObject static var articleBookmarkVM = BookmarkVM.shared
-    
-    //@StateObject static var bookmarkVM = BookmarkVM.shared
-
     
     static var previews: some View {
         NewsTab(articleNewsVM: NewsVM(articles: Article.previewData))
