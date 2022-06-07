@@ -13,7 +13,7 @@ struct TampilanArticle: View {
     
     let article: Article
     var body: some View {
-        VStack(alignment: .trailing, spacing: 18) {
+        VStack(alignment: .leading, spacing: 0.0) {
             AsyncImage(url: article.imageURL) { phase in
   //             VStack(alignment: .trailing, spacing: -120) {
                 switch phase {
