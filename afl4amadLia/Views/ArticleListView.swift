@@ -20,7 +20,7 @@ struct ArticleListView: View {
                         selectedArticle = article
                     }
             }
-            .listRowInsets(.init(top: 2, leading: 6, bottom: 2, trailing: 6))
+            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
             .listRowSeparator(.hidden)
         }
         .listStyle(.plain)
