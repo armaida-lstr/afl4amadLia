@@ -112,7 +112,7 @@ struct TampilanArticle_Previews: PreviewProvider {
         NavigationView {
             List {
                 TampilanArticle(article: .previewData[0])
-                    .listRowInsets(.init(top: 2, leading: 6, bottom: 2, trailing: 6))
+                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .listStyle(.plain)
         }
