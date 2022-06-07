@@ -66,7 +66,7 @@ struct API {
         var url = "https://newsapi.org/v2/top-headlines?"
         url += "apiKey=\(apiKey)"
         url += "&language=en"
-        url += "&kategoriA=\(kategoriA.rawValue)"
+        url += "&category=\(kategoriA.rawValue)"
         return URL(string: url)!
     }
 }
