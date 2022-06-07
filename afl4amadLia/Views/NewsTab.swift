@@ -38,7 +38,7 @@ struct NewsTab: View {
             .searchable(text: $articleNewsVM.searchQuery) 
             .onChange(of: articleNewsVM.searchQuery) { newValue in
             if newValue.isEmpty {
-                articleNewsVM.phase = .empty
+                refreshTask()
             }
         }
         .onSubmit(of: .search, search)
@@ -56,7 +56,7 @@ struct NewsTab: View {
         case .empty:
             ProgressView()
         case .success(let articles) where articles.isEmpty:
-            SimpanKosong(text: "No Articles", image: nil)
+            SimpanKosong(text: "No Articles detected", image: nil)
         case .failure(let error):
             RetryView(text: error.localizedDescription, retryAction: refreshTask)
         default: EmptyView()
@@ -67,7 +67,7 @@ struct NewsTab: View {
       
     private var articles: [Article] {
 //        switch (articleNewsVM.phase), (searchVM.phase){
-        if case let .success(articles) = (articleNewsVM.phase){
+        if case let .success(articles) = articleNewsVM.phase {
             return articles
         }
          else {
@@ -91,16 +91,33 @@ struct NewsTab: View {
     }
     
     private var menu: some View {
-        Menu {
-            Picker("Category", selection: $articleNewsVM.fetchTaskToken.kategoriA) {
-                ForEach(KategoriA.allCases) {
-                    Text($0.text).tag($0)
-                }
-            }
-        } label: {
-            Image(systemName: "checklist")
-                .imageScale(.large)
+//        Menu {
+//            Picker("Category", selection: $articleNewsVM.fetchTaskToken.kategoriA) {
+//                ForEach(KategoriA.allCases) {
+//                    Text($0.text).tag($0)
+//                }
+//            }
 //
+     
+              
+                      Picker("Category", selection: $articleNewsVM.fetchTaskToken.kategoriA)
+                      {
+                          ForEach(KategoriA.allCases) {
+                              Text($0.text).tag($0)
+
+                          }
+                      }
+                      .pickerStyle(SegmentedPickerStyle())
+
+
+          }
+ //   }
+              
+//        } label: {
+//            Image(systemName: "checklist")
+         //       .imageScale(.large)
+//.pickerStyle(SegmentedPickerStyle())
+
 //            ZStack {
 //                Circle()
 //                    .fill(Color.yellow)
@@ -112,22 +129,23 @@ struct NewsTab: View {
                                  
             
 //
-        }
-    }
+
+
     
  
     private func search() {
         let searchQuery = articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-        if !searchQuery.isEmpty {
-//            articleNewsVM.addHistory(searchQuery)
-            articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-        }
+//        if !searchQuery.isEmpty {
+////            articleNewsVM.addHistory(searchQuery)
+//            articleNewsVM.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+//        }
         
         Task {
             await articleNewsVM.searchArticle()
         }
     }
 }
+
 
 struct NewsTab_Previews: PreviewProvider {
     
